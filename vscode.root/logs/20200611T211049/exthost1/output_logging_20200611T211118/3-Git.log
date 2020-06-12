@@ -1,0 +1,35 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /latreact/my-lat2
+> git status -z -u
+> git show :package.json
+> git ls-files --stage -- /latreact/my-lat2/package.json
+> git cat-file -s c8f295c50a85c6b38a028284525abba2875ab0a6
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :src/components/home.component.js
+> git ls-files --stage -- /latreact/my-lat2/src/components/home.component.js
+> git cat-file -s e8be3667293b72fb4ea78537b9b9b04b23372a90
+> git show :package.json
+> git ls-files --stage -- /latreact/my-lat2/package.json
+> git cat-file -s c8f295c50a85c6b38a028284525abba2875ab0a6
+> git show :src/components/home.component.js
+> git ls-files --stage -- /latreact/my-lat2/src/components/home.component.js
+> git cat-file -s e8be3667293b72fb4ea78537b9b9b04b23372a90
+> git show :src/App.js
+> git ls-files --stage -- /latreact/my-lat2/src/App.js
+> git cat-file -s 0d6dfcec85637a7a9d87b111a2e05e894827a041
+> git show :src/components/home.component.js
+> git ls-files --stage -- /latreact/my-lat2/src/components/home.component.js
+> git cat-file -s e8be3667293b72fb4ea78537b9b9b04b23372a90

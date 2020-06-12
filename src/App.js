@@ -9,9 +9,11 @@ import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Profile from "./components/profile.component";
 import Home from "./components/home.component";
-import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
+import ArticleList from "./components/article-list.component";
+import Article from "./components/article.component";
+import AddArticle from "./components/add-article.component";
 
 class App extends Component{
 
@@ -43,6 +45,8 @@ class App extends Component{
 
     logOut(){
         AuthService.logout();
+       window.location.href="/";
+     //   window.location.reload(false);
     }
 
     render(){
@@ -82,18 +86,30 @@ class App extends Component{
                             )}
 
                             {currentUser && (
-                                  <li className="nav-item">
-                                  <Link to="/user" className="nav-link">
-                                      User
-                                  </Link>
-                              </li>
+                               <li className="nav-item">
+                               <Link to="/article" className="nav-link">
+                                 Articles
+                               </Link>
+                             </li>
+                              
                             )}
+
+                            {currentUser && (
+                             
+                             
+                             <li className="nav-item">
+                               <Link to="/add" className="nav-link">
+                                 Add
+                               </Link>
+                             </li>
+                            )}
+
 
                         </div>
 
                         {currentUser ? 
                         (
-                        <div className="navbar-nav mr-auto">
+                        <div className="navbar-nav pull-right">
                             <li className="nav-item">
                                 <Link to="/profile" className="nav-link">
                                     {currentUser.username}
@@ -101,14 +117,14 @@ class App extends Component{
                             </li>
 
                             <li className="nav-item">
-                                <Link to="/login" className="nav-link" onClick={this.logOut}>
+                                <Link to="/" className="nav-link" onClick={this.logOut}>
                                     Logut
                                 </Link>
                             </li>
 
                         </div>
                             ) : (
-                            <div className="navbar-nav mr-auto">
+                            <div className="navbar-nav  pull-right">
                             <li className="nav-item">
                                 <Link to="/login" className="nav-link">
                                     Login
@@ -132,9 +148,11 @@ class App extends Component{
                             <Route exact path="/login" component={Login}/>
                             <Route exact path="/register" component={Register}/>
                             <Route exact path="/profile" component={Profile}/>
-                            <Route exact path="/user" component={BoardUser}/>
                             <Route exact path="/mod" component={BoardModerator}/>
                             <Route exact path="/admin" component={BoardAdmin}/>
+                            <Route exact path= "/article" component={ArticleList} />
+                            <Route exact path="/add" component={AddArticle} />
+                            <Route path="/article/:id" component={Article} />
                         </Switch>
                     </div>
 

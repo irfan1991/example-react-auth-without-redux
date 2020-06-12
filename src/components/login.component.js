@@ -63,7 +63,8 @@ export default class Login extends Component{
                     window.location.reload();
                 },
                 error => {
-                    const resMessage = (error.response && error.response.data  && error.response.data.message ) || error.message || error.toString();
+                    const resMessage = (error.response && error.response.data  && error.response.data.message ) 
+                    || error.message || error.toString();
 
                     this.setState({
                         loading :false,
@@ -82,7 +83,7 @@ export default class Login extends Component{
         return(
             <div className="col-md-12">
                 <div className="card card-container">
-                    <img src="" alt="profile" className="profile-img-card" />
+                    <img   src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="profile" className="profile-img-card" />
 
                     <Form 
                         onSubmit={this.handleLogin}

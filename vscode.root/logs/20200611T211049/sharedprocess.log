@@ -1,0 +1,3 @@
+[2020-06-11 21:11:06.563] [sharedprocess] [info] main {"machineId":"8dea58c1b98e252e99e8f50499d62743f63fb8f0f27130c4fd67d63df4ec2a1b","windowId":2}
+[2020-06-11 21:11:07.110] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/latreact/my-lat2/vscode.root/User/snippets'
+[2020-06-11 21:11:46.619] [sharedprocess] [info] Starting to clean up unused language packs.
